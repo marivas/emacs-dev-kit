@@ -23,4 +23,4 @@
 (global-set-key "\C-ca" 'org-agenda)
 
 (provide 'org-config)
-2-
+
