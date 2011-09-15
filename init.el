@@ -1,4 +1,4 @@
-;; Time-stamp: <2011-09-13 23:04:13 (bozhidar)>
+;; Time-stamp: <2011-09-15 20:35:57 (marivas)>
 
 ;; Copyright (C) 2009-2011  Bozhidar Batsov.
 ;; This file is free software licensed under the terms of the
@@ -17,9 +17,7 @@
 ;; Turn off mouse interface early in startup to avoid momentary display
 ;; You really don't need these; trust me.
 (tool-bar-mode -1)
-;; removing the menubar under OS X doesn't make much sense
-(unless (string= system-type "darwin")
- (menu-bar-mode -1))
+(menu-bar-mode -1)
 (blink-cursor-mode -1)
 
 ;; disable startup screen
@@ -29,8 +27,9 @@
 (setq debug-on-error t)
 
 ;; show a scrollbar on the right
-(scroll-bar-mode t)
-(set-scroll-bar-mode 'right)
+;;(scroll-bar-mode t)
+;;(set-scroll-bar-mode 'right)
+(set-scroll-bar-mode -1)
 
 ;; on OS X Emacs doesn't use the system PATH for some reason
 ;; if you're using homebrew modifying the PATH is essential
