@@ -1,4 +1,4 @@
-;; Time-stamp: <2011-09-15 20:35:57 (marivas)>
+;; Time-stamp: <2011-09-19 17:49:08 (marivas)>
 
 ;; Copyright (C) 2009-2011  Bozhidar Batsov.
 ;; This file is free software licensed under the terms of the
@@ -26,15 +26,17 @@
 ;; a proper stack trace is priceless
 (setq debug-on-error t)
 
-;; show a scrollbar on the right
-;;(scroll-bar-mode t)
-;;(set-scroll-bar-mode 'right)
-(set-scroll-bar-mode -1)
+;; Emacs gurus don't need no stinking scroll bars
+(when (fboundp 'toggle-scroll-bar)
+  (toggle-scroll-bar -1))
 
 ;; on OS X Emacs doesn't use the system PATH for some reason
 ;; if you're using homebrew modifying the PATH is essential
 (if (string= system-type "darwin")
     (push "/usr/local/bin" exec-path))
+
+
+
 
 ;; determine the load path dirs
 ;; as relative to the location of this file
