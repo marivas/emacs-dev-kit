@@ -13,6 +13,7 @@
                              "~/org/projects.org"
                              
                              "~/org/personal.org"
+                             "~/org/ideas.org"
                              "~/org/notes.org"))
 
 ;;; mobileorg
