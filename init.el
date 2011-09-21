@@ -1,4 +1,4 @@
-;; Time-stamp: <2011-09-19 17:49:08 (marivas)>
+;; Time-stamp: <2011-09-19 21:34:41 (marivas)>
 
 ;; Copyright (C) 2009-2011  Bozhidar Batsov.
 ;; This file is free software licensed under the terms of the
@@ -32,8 +32,9 @@
 
 ;; on OS X Emacs doesn't use the system PATH for some reason
 ;; if you're using homebrew modifying the PATH is essential
-(if (string= system-type "darwin")
-    (push "/usr/local/bin" exec-path))
+(when (string= system-type "darwin")
+    (push "/usr/local/bin" exec-path)
+    (push "~/bin" exec-path))
 
 
 
