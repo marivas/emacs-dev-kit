@@ -16,3 +16,4 @@ custom.el
 .DS_Store
 /npm-debug.log
 /url/cookies
+/eshell/history

@@ -16,7 +16,7 @@
 
 ;; Turn off mouse interface early in startup to avoid momentary display
 ;; You really don't need these; trust me.
-(tool-bar-mode -1)
+;;(tool-bar-mode -1)
 (menu-bar-mode -1)
 (blink-cursor-mode -1)
 
