@@ -14,7 +14,8 @@
                              
                              "~/org/personal.org"
                              "~/org/ideas.org"
-                             "~/org/notes.org"))
+                             "~/org/notes.org"
+                             "~/org/nuevaweb.org"))
 
 ;;; mobileorg
 (setq org-mobile-inbox-for-pull "~/org/flagged.org")
