@@ -27,6 +27,8 @@
           '(lambda ()
              (coding-hook)
              (inf-ruby-keys)
+             ;; turn off the annoying input echo in irb
+             (setq comint-process-echoes t)
              (ruby-block-mode t)
              (local-set-key (kbd "C-h r") 'yari)))
 
@@ -42,5 +44,12 @@
 ;; HAML and SASS are quite handy in Rails development
 (require 'haml-mode)
 (require 'scss-mode)
+
+;; cucumber support
+(require 'feature-mode)
+(add-to-list 'auto-mode-alist '("\.feature$" . feature-mode))
+
+;; load bundle snippets
+(yas/load-directory  (concat ext-dir "feature-mode/snippets"))
 
 (provide 'ruby-config)
