@@ -45,6 +45,10 @@
 (require 'haml-mode)
 (require 'scss-mode)
 
+;; for rvm
+(require 'rvm)
+(rvm-use-default)
+
 ;; cucumber support
 (require 'feature-mode)
 (add-to-list 'auto-mode-alist '("\.feature$" . feature-mode))
