@@ -1,4 +1,4 @@
-;; Time-stamp: <2011-09-19 21:34:41 (marivas)>
+;; Time-stamp: <2011-10-17 18:03:05 (marivas)>
 
 ;; Copyright (C) 2009-2011  Bozhidar Batsov.
 ;; This file is free software licensed under the terms of the
@@ -74,9 +74,9 @@ Emacs load path."
 
 ;; a list of all configurations that must be loaded
 
-(defvar configs '(elpa misc coding emacs-lisp common-lisp scheme c
+(defvar configs '(elpa misc coding gtags emacs-lisp common-lisp scheme c
                        python ruby coffee-script haskell scala clojure
-                       ibuffer erc auctex nxml org prolog bindings))
+                       ibuffer erc auctex nxml org prolog bindings ))
 
 (defun require-config (config)
   (message "Loading %s..." config)

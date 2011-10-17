@@ -30,6 +30,15 @@
              (ruby-block-mode t)
              (local-set-key (kbd "C-h r") 'yari)))
 
+;; gtags
+(add-hook 'ruby-mode-hook (lambda ()
+                            (gtags-mode 1)
+                            (setq gtags-symbol-regexp "[A-Za-z_:][A-Za-z0-9_#.:?]*")
+                            (define-key ruby-mode-map "\e." 'gtags-find-tag)
+                            (define-key ruby-mode-map "\e," 'gtags-find-with-grep)
+                            (define-key ruby-mode-map "\e:" 'gtags-find-symbol)
+                            (define-key ruby-mode-map "\e_" 'gtags-find-rtag)))
+
 ;; HAML and SASS are quite handy in Rails development
 (require 'haml-mode)
 (require 'scss-mode)
